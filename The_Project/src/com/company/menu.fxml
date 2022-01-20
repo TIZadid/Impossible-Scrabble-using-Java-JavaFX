@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #17202A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.menu_controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="689.0" minWidth="10.0" prefWidth="76.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="689.0" minWidth="10.0" prefWidth="591.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="853.0" minWidth="10.0" prefWidth="621.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="286.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="524.0" minHeight="10.0" prefHeight="399.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="327.0" minHeight="10.0" prefHeight="234.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="327.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text fill="#d9d9d9" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Impossible Scrabble" textAlignment="CENTER" wrappingWidth="660.552001953125" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+         <effect>
+            <InnerShadow color="#19bec9" />
+         </effect>
+         <font>
+            <Font name="28 Days Later" size="150.0" />
+         </font>
+      </Text>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <center>
+            <Button fx:id="highscore" mnemonicParsing="false" onAction="#highscores" prefHeight="62.0" prefWidth="335.0" style="-fx-background-radius: 10; -fx-background-color: ;" text="LeaderBoard" textFill="#236975" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="28 Days Later" size="48.0" />
+               </font>
+            </Button>
+         </center>
+      </BorderPane>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <center>
+            <Button fx:id="exit" mnemonicParsing="false" onAction="#onexitButton" prefHeight="86.0" prefWidth="202.0" style="-fx-background-radius: 10;" text="Exit" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="28 Days Later" size="55.0" />
+               </font>
+            </Button>
+         </center>
+      </BorderPane>
+      <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="67.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="10.0" prefWidth="466.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="33.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#236975" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Name:" wrappingWidth="426.24560546875" GridPane.columnIndex="1">
+               <font>
+                  <Font name="28 Days Later" size="83.0" />
+               </font>
+            </Text>
+            <TextField fx:id="name" onAction="#newgame" opacity="0.25" prefHeight="100.0" prefWidth="466.0" text="GUEST" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Airstrike Regular" size="47.0" />
+               </font>
+            </TextField>
+            <Button fx:id="play" mnemonicParsing="false" onAction="#newgame" prefHeight="99.0" prefWidth="447.0" style="-fx-background-radius: 10; -fx-background-color: ;" text="enter lobby" textFill="#236975" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Airstrike Regular" size="51.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

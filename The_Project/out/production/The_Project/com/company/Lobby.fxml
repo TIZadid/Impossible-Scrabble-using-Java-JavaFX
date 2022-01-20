@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #17202A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.ClientControllerPlayer">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="860.0" minWidth="10.0" prefWidth="298.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="835.0" minWidth="10.0" prefWidth="581.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.0" minWidth="10.0" prefWidth="398.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="773.0" minWidth="10.0" prefWidth="21.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="155.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="138.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="618.0" minHeight="10.0" prefHeight="511.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="76.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <children>
+            <HBox prefHeight="62.0" prefWidth="321.0">
+               <children>
+                  <TextField fx:id="chatBox" onAction="#onPressingSend" prefHeight="74.0" prefWidth="321.0" promptText="enter message">
+                     <font>
+                        <Font name="Airstrike Regular" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#onPressingSend" prefHeight="73.0" prefWidth="94.0" text="send">
+               <font>
+                  <Font name="Airstrike Regular" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <TextArea fx:id="centralTextArea" editable="false" prefHeight="452.0" prefWidth="371.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="Berlin Sans FB" size="27.0" />
+         </font>
+      </TextArea>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <center>
+            <Text fill="#218381" strokeType="OUTSIDE" strokeWidth="0.0" text="Live chat" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Dopestyle" size="74.0" />
+               </font>
+            </Text>
+         </center>
+      </BorderPane>
+      <Text fill="#d9d9d9" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Impossible Scrabble" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="854.552001953125" GridPane.rowIndex="1">
+         <effect>
+            <InnerShadow color="#19bec9" />
+         </effect>
+         <font>
+            <Font name="28 Days Later" size="74.0" />
+         </font>
+      </Text>
+      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="532.0" minWidth="10.0" prefWidth="532.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="0.0" prefWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="126.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="206.0" minHeight="0.0" prefHeight="112.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="257.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#218381" strokeType="OUTSIDE" strokeWidth="0.0" text="Lobby">
+               <font>
+                  <Font name="Dopestyle" size="96.0" />
+               </font>
+            </Text>
+            <Button fx:id="onePlayer" mnemonicParsing="false" onAction="#onClickingonePlayer" prefHeight="85.0" prefWidth="353.0" text="Start 1 player mode" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Airstrike Regular" size="27.0" />
+               </font>
+            </Button>
+            <Button fx:id="twoPlayer" mnemonicParsing="false" onAction="#onClickingtwoPlayer" prefHeight="85.0" prefWidth="353.0" text="Start 2 player mode" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Airstrike Regular" size="27.0" />
+               </font>
+            </Button>
+            <Button fx:id="no" mnemonicParsing="false" onAction="#onClickingNo" prefHeight="49.0" prefWidth="353.0" text="decline" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Airstrike Regular" size="37.0" />
+               </font>
+            </Button>
+            <Button fx:id="yes" mnemonicParsing="false" onAction="#onClickingYes" prefHeight="51.0" prefWidth="350.0" text="accept" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Airstrike Regular" size="37.0" />
+               </font>
+            </Button>
+            <Button fx:id="start" mnemonicParsing="false" onAction="#onClickingYes" prefHeight="65.0" prefWidth="350.0" text="start" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Airstrike Regular" size="40.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#onClickingCancel" prefHeight="65.0" prefWidth="349.0" text="cancel" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Airstrike Regular" size="40.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Text fx:id="request" fill="#d9d9d9" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="waiting for response" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="854.552001953125" GridPane.rowIndex="3">
+         <effect>
+            <InnerShadow>
+               <input>
+                  <Glow />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="28 Days Later" size="87.0" />
+         </font>
+      </Text>
+      <Text fx:id="invite" fill="#d9d9d9" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="one-on-one request" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="854.552001953125" GridPane.rowIndex="3">
+         <effect>
+            <InnerShadow>
+               <input>
+                  <Glow />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="28 Days Later" size="87.0" />
+         </font>
+      </Text>
+   </children>
+</GridPane>

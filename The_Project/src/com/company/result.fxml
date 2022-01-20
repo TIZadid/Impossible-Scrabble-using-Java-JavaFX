@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #17202A;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.company.resultcontroller">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="55.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="504.0" minWidth="10.0" prefWidth="470.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="10.0" prefWidth="235.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="482.0" minWidth="0.0" prefWidth="458.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="48.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="451.0" minHeight="10.0" prefHeight="263.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="482.0" minHeight="10.0" prefHeight="318.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="331.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="user" alignment="CENTER" editable="false" prefHeight="212.0" prefWidth="497.0" style="-fx-background-color: #781a1a;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Airstrike Regular" size="55.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="opponent" alignment="CENTER" editable="false" prefHeight="210.0" prefWidth="449.0" style="-fx-background-color: #781a1a;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <font>
+            <Font name="Airstrike Regular" size="55.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </TextField>
+      <Button fx:id="back" mnemonicParsing="false" onAction="#onClickingBack" prefHeight="123.0" prefWidth="478.0" text="main menu" textFill="#781a1a" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <font>
+            <Font name="Airstrike Regular" size="61.0" />
+         </font>
+      </Button>
+      <Text fill="#d9d9d9" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Impossible Scrabble" textAlignment="CENTER" textOrigin="TOP" wrappingWidth="694.552001953125" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <effect>
+            <InnerShadow color="#781a1a" />
+         </effect>
+         <font>
+            <Font name="28 Days Later" size="84.0" />
+         </font>
+      </Text>
+      <BorderPane prefHeight="167.0" prefWidth="222.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <center>
+            <Text fill="#781a1a" strokeType="OUTSIDE" strokeWidth="0.0" text="VS" wrappingWidth="163.205078125" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Airstrike Regular" size="100.0" />
+               </font>
+            </Text>
+         </center>
+      </BorderPane>
+   </children>
+</GridPane>

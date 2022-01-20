@@ -1,0 +1,53 @@
+package com.company;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import static com.company.twoplayergameplaycontroller.oppscore;
+import static com.company.twoplayergameplaycontroller.userscore;
+
+public class resultcontroller implements Initializable {
+
+    @FXML
+ private    TextField user;
+    @FXML
+    private TextField opponent;
+    @FXML private Button back;
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+    user.setText(userscore);
+    opponent.setText(oppscore);
+    userscore="";
+    oppscore="";
+    }
+    public void onClickingBack(ActionEvent event) throws IOException {
+        //  Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("startscreen.fxml"));
+        Parent mainWindow = loader.load();
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setTitle("Impossible Scrabble");
+        Scene XX = new Scene(mainWindow, primaryScreenBounds.getWidth(), primaryScreenBounds.getHeight());
+        window.setScene(XX);
+        window.show();
+        window.setMaximized(true);
+    }
+}
